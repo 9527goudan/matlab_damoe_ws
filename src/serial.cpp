@@ -1,4 +1,5 @@
 #include "serial.hpp"
+#include <stdio.h>
 
 
 SERIAL::SERIAL(const string &portName_): serial(io, portName_)
@@ -15,9 +16,9 @@ SERIAL::~SERIAL()
 
 void SERIAL::set_serail_option(int baudRate, int character_size, int Calibration, int stop)
 {
-    serial.set_option(serial_port_base::baud_rate(baudRate));
-    serial.set_option(serial_port_base::character_size(character_size));
-    switch (Calibration)
+    serial.set_option(serial_port_base::baud_rate(baudRate));//波特率设置
+    serial.set_option(serial_port_base::character_size(character_size));//数据位设置
+    switch (Calibration)//校验位设置
     {
     case 0:
         serial.set_option(serial_port_base::parity(serial_port_base::parity::none));
@@ -33,7 +34,7 @@ void SERIAL::set_serail_option(int baudRate, int character_size, int Calibration
         serial.set_option(serial_port_base::parity(serial_port_base::parity::none));
         break;
     }
-    switch (stop)
+    switch (stop)//停止位
     {
     case 0:
         serial.set_option(serial_port_base::stop_bits(serial_port_base::stop_bits::onepointfive));
@@ -48,7 +49,7 @@ void SERIAL::set_serail_option(int baudRate, int character_size, int Calibration
         serial.set_option(serial_port_base::stop_bits(serial_port_base::stop_bits::one));
         break;
     }
-    serial.set_option(serial_port_base::flow_control(serial_port_base::flow_control::none));
+    serial.set_option(serial_port_base::flow_control(serial_port_base::flow_control::none));//流控
 }
 
 bool SERIAL::openSerial()
@@ -64,13 +65,42 @@ bool SERIAL::openSerial()
 
 
 
-void SERIAL::readSome(double *outData)
+void SERIAL::readSome(string *outData)
 {
-    float dataBuff[9];
-    size_t _i = read(serial, buffer(dataBuff, 9));
-    for (size_t i = 0; i < _i; i++)
-       outData[i] = dataBuff[i];
+    char *Buffdata = new char[64];
+    string dataBuff{}, data{};
+    size_t _i = 0;
+    
+    cout << "00000" << endl;
+    // while (dataBuff.length() <= 192)
+    // {
+    //     _i = read(serial, buffer(Buffdata, 64));
+    //     dataBuff += Buffdata;
+    //     memset(Buffdata, 0 ,strlen(Buffdata));
+    // }
+    _i = read(serial, buffer(Buffdata, 128));
+    dataBuff += Buffdata;
+    cout << "i:" << _i << " buff:"<<dataBuff.data() << endl;
+    if (0 < _i)
+    {
+        size_t pos_hander, pos_end;
+        pos_hander = dataBuff.find_first_of("x");
+        pos_end = dataBuff.find_first_of("m");
+        cout << "i: " << _i << " pos_hander: " << pos_hander << " pos_end: " << pos_end  << " buff_length: " << dataBuff.length() << endl;
+
+        if (pos_hander > pos_end)
+        {
+            dataBuff = dataBuff.substr(pos_hander);
+            pos_end = dataBuff.find_first_of("m");
+            data = dataBuff.substr(0, pos_end);
+        }
+        else
+            data = dataBuff.substr(pos_hander, pos_end - pos_hander);
+    }
+    *outData = data;
+    delete[] Buffdata;
 }
+
 
 
 void SERIAL::witeSome(double *witeBuff, size_t size_)
@@ -83,8 +113,6 @@ void SERIAL::witeSome(double *witeBuff, size_t size_)
         cout << dataBuff[i] << " " ;
     }
     cout << endl;
-    
-    //write(serial, buffer(dataBuff, 6));
 }
 
 

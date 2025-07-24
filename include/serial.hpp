@@ -2,6 +2,7 @@
 #define _SERIAL_CLASS_
 
 #include <boost/asio.hpp>
+#include <chrono>
 #include <string>
 #include <iostream>
 #include <jsoncpp/json/json.h>
@@ -38,7 +39,7 @@ public:
     /// @return true：成功；false：失败
     bool openSerial();
 
-    void readSome(double *outData);
+    void readSome(string *outData);
 
     void witeSome(double *witeBuff, size_t size_);
 
