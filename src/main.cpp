@@ -47,9 +47,9 @@ int main(int, char**)
         Pf[5] = matlabV6[2];
 
         double sensor_lenger[6]{};
+        size_t j = 3;
         for (size_t i = 0; i < 6; i++)
         {
-            static size_t j = 3;
             sensor_lenger[i] = matlabV6[j];
             j++;
         }
