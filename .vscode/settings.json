@@ -1,0 +1,11 @@
+{
+    "C_Cpp.dimInactiveRegions": false,
+    "files.associations": {
+        "*.cpp": "cpp",
+        "*.hpp": "cpp",
+        "atomic": "cpp",
+        "iostream": "cpp",
+        "fstream": "cpp",
+        "ostream": "cpp"
+    }
+}
