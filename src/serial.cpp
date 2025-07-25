@@ -1,11 +1,13 @@
 #include "serial.hpp"
-#include <stdio.h>
 
 
 SERIAL::SERIAL(const string &portName_): serial(io, portName_)
 {
     is_open_serial = false;
     portName = portName_;
+    serial_fd = serial.native_handle();
+
+    tcflush(serial_fd, TCIOFLUSH);
 }
 
 SERIAL::~SERIAL()
@@ -69,24 +71,15 @@ void SERIAL::readSome(string *outData)
 {
     char *Buffdata = new char[64];
     string dataBuff{}, data{};
-    size_t _i = 0;
     
-    cout << "00000" << endl;
-    // while (dataBuff.length() <= 192)
-    // {
-    //     _i = read(serial, buffer(Buffdata, 64));
-    //     dataBuff += Buffdata;
-    //     memset(Buffdata, 0 ,strlen(Buffdata));
-    // }
-    _i = read(serial, buffer(Buffdata, 128));
+    size_t _i = read(serial, buffer(Buffdata, 128));
     dataBuff += Buffdata;
-    cout << "i:" << _i << " buff:"<<dataBuff.data() << endl;
+    //cout << "i:" << _i << " buff:"<<dataBuff.data() << endl;
     if (0 < _i)
     {
         size_t pos_hander, pos_end;
         pos_hander = dataBuff.find_first_of("x");
         pos_end = dataBuff.find_first_of("m");
-        cout << "i: " << _i << " pos_hander: " << pos_hander << " pos_end: " << pos_end  << " buff_length: " << dataBuff.length() << endl;
 
         if (pos_hander > pos_end)
         {
@@ -99,9 +92,8 @@ void SERIAL::readSome(string *outData)
     }
     *outData = data;
     delete[] Buffdata;
+    tcflush(serial_fd, TCIFLUSH);
 }
-
-
 
 void SERIAL::witeSome(double *witeBuff, size_t size_)
 {

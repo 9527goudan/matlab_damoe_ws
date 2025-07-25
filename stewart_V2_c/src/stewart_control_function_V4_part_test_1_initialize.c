@@ -20,13 +20,12 @@
 void stewart_control_function_V4_part_test_1_initialize(void)
 {
   int i;
-  static const double b_dv[6] = { 170.986, 186.426, 194.285, 188.708, 179.721,
-    169.118 };
+  static const double b_dv[6] = { 0, 0, 0, 0, 0,0 };
 
-  static const short iv[6] = { 0, 0, 700, 10, 10, 0 };
+  static const short iv[6] = { 0, 0, 0, 0, 0, 0 };
 
   rt_InitInfAndNaN();
-  flag_v = 2.0;
+  flag_v = 1.0;
   for (i = 0; i < 6; i++) {
     pre_length_last[i] = b_dv[i];
     pre_Pf[i] = iv[i];

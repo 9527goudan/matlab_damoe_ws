@@ -2,11 +2,11 @@
 #define _SERIAL_CLASS_
 
 #include <boost/asio.hpp>
-#include <chrono>
 #include <string>
 #include <iostream>
 #include <jsoncpp/json/json.h>
 #include <fstream>
+#include <termios.h>
 
 using namespace std;
 using namespace boost::asio;
@@ -18,6 +18,7 @@ private:
     serial_port serial;
     bool is_open_serial;
     string portName{};
+    int serial_fd;
 public:
     /// @brief 构造函数，串口参数设置
     /// @param port 端口号“/dev/ttyUSB0”
