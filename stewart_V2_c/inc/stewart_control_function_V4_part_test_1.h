@@ -20,7 +20,7 @@ extern void d_stewart_control_function_V4_p(void);
 
 #ifdef __cplusplus
 extern "C" {
-   void stewart_control_function_V4_part_test_1(double *inputData, int* outputDataLenger, int *inputSize, int inputSizeLenger,
+   void stewart_control_function_V4_part_test_1(double *inputData, int outputDataLenger, int *inputSize,
                                                 const double sensor_length[6],double Pf[6], double vec[6]);
 }
 #endif

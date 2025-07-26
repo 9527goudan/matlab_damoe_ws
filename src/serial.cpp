@@ -97,14 +97,17 @@ void SERIAL::readSome(string *outData)
 
 void SERIAL::witeSome(double *witeBuff, size_t size_)
 {
-    float dataBuff[size_];
-    cout << "写： " ;
-    for (size_t i = 0; i < size_; i++)
-    {
-        dataBuff[i] = witeBuff[i];
-        cout << dataBuff[i] << " " ;
-    }
-    cout << endl;
+    string write_buffee = "v1" + to_string(witeBuff[0]) 
+                        + "v2" + to_string(witeBuff[1])
+                        + "v3" + to_string(witeBuff[2])
+                        + "v4" + to_string(witeBuff[3])
+                        + "v5" + to_string(witeBuff[4])
+                        + "v6" + to_string(witeBuff[5])
+                        + "m";
+
+    int witeIdx = write(serial, buffer(write_buffee.c_str(), write_buffee.length()));
+    cout << "计数：" << witeIdx << "  [ " << write_buffee.data() << " ]\n";
+    tcflush(serial_fd, TCOFLUSH);
 }
 
 
