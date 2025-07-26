@@ -5,8 +5,6 @@
 #include <unistd.h>
 #include <stdio.h>
 
-
-
 atomic<bool> got_sigint(false);
 
 void hander(int s)
@@ -35,6 +33,12 @@ int main(int, char**)
     cout << "串口打开成功" << endl;
 
     float Pf[6] = {0, 0 , 700};
+    
+    int planningDataLenger = 2048;
+    int planningSizeLenger = 8;
+    double planningData[2048]{};
+    int planningDataSize[4]{};
+    int* dataLenger;
 
     while (!got_sigint)
     {
@@ -70,12 +74,14 @@ int main(int, char**)
         //读-->数据处理-->计算-->写   测试暂用同步处理，效果不理想改异步处理，可能改善效果
         double vec[6]{};
         cout << "000000000000" << endl;
-        stewart_control_function_V4_part_test_1(sensor_lenger_, Pf_, vec);
+        stewart_control_function_V4_part_test_1(planningData, dataLenger, planningDataSize, planningSizeLenger, sensor_lenger_, Pf_, vec);
         cout << "11111111111" << endl;
         serial_.witeSome(vec, 6);
         
         matlabV6.clear();
         //usleep(200 * 1000);
     }
+
+    //delete[] planningData;
     return 0;
 }
