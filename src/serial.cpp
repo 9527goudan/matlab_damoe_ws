@@ -97,13 +97,21 @@ void SERIAL::readSome(string *outData)
 
 void SERIAL::witeSome(double *witeBuff, size_t size_)
 {
-    string write_buffee = "v1" + to_string(witeBuff[0]) 
-                        + "v2" + to_string(witeBuff[1])
-                        + "v3" + to_string(witeBuff[2])
-                        + "v4" + to_string(witeBuff[3])
-                        + "v5" + to_string(witeBuff[4])
-                        + "v6" + to_string(witeBuff[5])
-                        + "m";
+    // string write_buffee = "v1" + to_string(witeBuff[0]) 
+    //                     + "v2" + to_string(witeBuff[1])
+    //                     + "v3" + to_string(witeBuff[2])
+    //                     + "v4" + to_string(witeBuff[3])
+    //                     + "v5" + to_string(witeBuff[4])
+    //                     + "v6" + to_string(witeBuff[5])
+    //                     + "m";
+
+    string write_buffee{};
+    for (size_t i = 0; i < 6; i++)
+    {
+        write_buffee += "v" + to_string(i) + to_string(witeBuff[i]);
+        if(6 == i)
+            write_buffee += "m";
+    }
 
     int witeIdx = write(serial, buffer(write_buffee.c_str(), write_buffee.length()));
     cout << "计数：" << witeIdx << "  [ " << write_buffee.data() << " ]\n";
