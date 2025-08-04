@@ -34,9 +34,9 @@ int main(int, char**)
 
     float Pf[6] = {0, 0 , 700};
     
-    double planningData[2048]{};
+    int dataLenger = 4096;
+    double planningData[dataLenger]{};
     int planningDataSize[4]{};
-    int dataLenger;
 
     while (!got_sigint)
     {

@@ -69,10 +69,10 @@ bool SERIAL::openSerial()
 
 void SERIAL::readSome(string *outData)
 {
-    char *Buffdata = new char[64];
+    char *Buffdata = new char[1024];
     string dataBuff{}, data{};
     
-    size_t _i = read(serial, buffer(Buffdata, 128));
+    size_t _i = read(serial, buffer(Buffdata, 1024));
     dataBuff += Buffdata;
     //cout << "i:" << _i << " buff:"<<dataBuff.data() << endl;
     if (0 < _i)

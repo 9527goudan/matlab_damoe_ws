@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Site BuildName="Linux-g++"
 	BuildStamp="20250730-1015-Experimental"
-	Name="Legion-Tom"
-	Generator="ctest-3.16.3"
+	Name="tom"
+	Generator="ctest-3.22.1"
 	CompilerName="/usr/bin/g++"
-	CompilerVersion="9.4.0"
+	CompilerVersion="11.4.0"
 	OSName="Linux"
-	Hostname="Legion-Tom"
-	OSRelease="6.6.87.2-microsoft-standard-WSL2"
-	OSVersion="#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025"
+	Hostname="tom"
+	OSRelease="6.8.0-65-generic"
+	OSVersion="#68~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Jul 15 18:06:34 UTC 2"
 	OSPlatform="x86_64"
 	Is64Bits="1"
 	VendorString="GenuineIntel"
@@ -16,19 +16,19 @@
 	FamilyID="6"
 	ModelID="154"
 	ProcessorCacheSize="24576"
-	NumberOfLogicalCPU="20"
+	NumberOfLogicalCPU="16"
 	NumberOfPhysicalCPU="10"
-	TotalVirtualMemory="2048"
-	TotalPhysicalMemory="7843"
-	LogicalProcessorsPerPhysical="2"
-	ProcessorClockFrequency="2688"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="15695"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="4100"
 	>
 	<Testing>
-		<StartDateTime>Jul 30 18:15 CST</StartDateTime>
-		<StartTestTime>1753870537</StartTestTime>
+		<StartDateTime>Jul 30 18:37 CST</StartDateTime>
+		<StartTestTime>1753871856</StartTestTime>
 		<TestList/>
-		<EndDateTime>Jul 30 18:15 CST</EndDateTime>
-		<EndTestTime>1753870537</EndTestTime>
+		<EndDateTime>Jul 30 18:37 CST</EndDateTime>
+		<EndTestTime>1753871856</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

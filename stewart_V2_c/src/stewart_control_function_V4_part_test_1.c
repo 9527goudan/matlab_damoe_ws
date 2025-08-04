@@ -1968,8 +1968,8 @@ void stewart_control_function_V4_part_test_1(double* inputData, int outputDataLe
       traj_not_empty = (traj->size[0] != 0);
       b_i = vel->size[0] * vel->size[1];
 
-      // memset(inputData, 0, inputDataLenger);
-      // memset(inputSize, 0, inputSizeLenger);
+      memset(inputData, 0, outputDataLenger);
+      memset(inputSize, 0, 4);
 
       inputSize[0] = b_vel->size[0];
       inputSize[1] = 6;
