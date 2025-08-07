@@ -8,6 +8,7 @@
 #include <fstream>
 #include <termios.h>
 
+
 using namespace std;
 using namespace boost::asio;
 
@@ -19,6 +20,7 @@ private:
     bool is_open_serial;
     string portName{};
     int serial_fd;
+
 public:
     /// @brief 构造函数，串口参数设置
     /// @param port 端口号“/dev/ttyUSB0”
@@ -40,9 +42,15 @@ public:
     /// @return true：成功；false：失败
     bool openSerial();
 
-    void readSome(string *outData);
+    /// @brief 同步读取串口数据
+    /// @param outData 输出读取到的数据
+    /// @param cache_ 读取数据长度 默认1024
+    void readSome(string *outData, size_t cache_);
 
-    void witeSome(double *witeBuff, size_t size_);
+
+    /// @brief 同步写入串口数据
+    /// @param witeBuff 写入的数据
+    void witeSome(double *witeBuff);
 
 };
 

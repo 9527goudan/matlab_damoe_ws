@@ -67,12 +67,12 @@ bool SERIAL::openSerial()
 
 
 
-void SERIAL::readSome(string *outData)
+void SERIAL::readSome(string *outData, size_t cache_ = 1024)
 {
-    char *Buffdata = new char[1024];
+    char *Buffdata = new char[cache_];
     string dataBuff{}, data{};
     
-    size_t _i = read(serial, buffer(Buffdata, 1024));
+    size_t _i = read(serial, buffer(Buffdata, cache_));
     dataBuff += Buffdata;
     //cout << "i:" << _i << " buff:"<<dataBuff.data() << endl;
     if (0 < _i)
@@ -95,24 +95,12 @@ void SERIAL::readSome(string *outData)
     tcflush(serial_fd, TCIFLUSH);
 }
 
-void SERIAL::witeSome(double *witeBuff, size_t size_)
+void SERIAL::witeSome(double *witeBuff)
 {
-    // string write_buffee = "v1" + to_string(witeBuff[0]) 
-    //                     + "v2" + to_string(witeBuff[1])
-    //                     + "v3" + to_string(witeBuff[2])
-    //                     + "v4" + to_string(witeBuff[3])
-    //                     + "v5" + to_string(witeBuff[4])
-    //                     + "v6" + to_string(witeBuff[5])
-    //                     + "m";
-
     string write_buffee{};
     for (size_t i = 0; i < 6; i++)
-    {
-        write_buffee += "v" + to_string(i) + to_string(witeBuff[i]);
-        if(6 == i)
-            write_buffee += "m";
-    }
-    
+        write_buffee += "v" + to_string(i + 1) + to_string(witeBuff[i]);
+    write_buffee += "m";
 
     int witeIdx = write(serial, buffer(write_buffee.c_str(), write_buffee.length()));
     cout << "计数：" << witeIdx << "  [ " << write_buffee.data() << " ]\n";

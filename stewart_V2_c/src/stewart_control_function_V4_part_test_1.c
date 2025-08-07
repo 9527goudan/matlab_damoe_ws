@@ -1981,12 +1981,9 @@ void stewart_control_function_V4_part_test_1(double* inputData, int outputDataLe
       outputDataLenger = idx;
 
       //memcpy(inputData, b_vel->data, sizeof(double) * (int)outputDataLenger);
-      printf("idx=%d  b_vel_data:[ ", idx);
       for (b_i = 0; b_i < idx; b_i++) {
         inputData[b_i] = b_vel->data[b_i];
-        printf(" %d ", b_vel[b_i]);
       }
-      printf(" ]\n");
 
       /* %%%%%%%%%%%%%%%%% */
       time_idx = 1.0;
@@ -2095,18 +2092,6 @@ void stewart_control_function_V4_part_test_1(double* inputData, int outputDataLe
         }
       }
 
-    // printf("\n-------------3333------------\n");
-    // printf("\n-------------4444------------\n");
-    // vel->data = inputData;
-    // vel->size = inputSize;
-
-    printf("idx=%d  input_data:[ ", outputDataLenger);
-      for (size_t b_i = 0; b_i < outputDataLenger; b_i++) {
-        printf(" %d ", inputData[b_i]);
-      }
-      printf(" ]\n");
-    printf("\n-------------5555------------\n");
-
       /*  ������٣�l_dot = J' * Vn */
       for (i = 0; i < 6; i++) {
         /*  ��ƽ̨������ֲ����� */
@@ -2153,11 +2138,9 @@ void stewart_control_function_V4_part_test_1(double* inputData, int outputDataLe
         J[i + 30] = p_i_tmp[0] * l_i[1] - p_i_tmp[1] * l_i[0];
         d = 0.0;
 
-        printf("--------------------------------\n");
         for (int b_i = 0; b_i < 6; b_i++) {
           d += J[i + 6 * b_i] * inputData[((int)time_idx + inputSize[0] * b_i) - 1];
         }
-        printf("--------------d: %d-----------------\n", d);
         vec[i] = fmin(fmax(d, -20.0), 20.0);
       }
 

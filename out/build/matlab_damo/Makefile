@@ -127,6 +127,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named libstewart_V2_c
+
+# Build rule for target.
+libstewart_V2_c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libstewart_V2_c
+.PHONY : libstewart_V2_c
+
+# fast build rule for target.
+libstewart_V2_c/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/build
+.PHONY : libstewart_V2_c/fast
+
+#=============================================================================
 # Target rules for targets named matlab_damo
 
 # Build rule for target.
@@ -556,7 +569,7 @@ stewart_V2_c/src/cosd.o: stewart_V2_c/src/cosd.c.o
 
 # target to build an object file
 stewart_V2_c/src/cosd.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/cosd.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/cosd.c.o
 .PHONY : stewart_V2_c/src/cosd.c.o
 
 stewart_V2_c/src/cosd.i: stewart_V2_c/src/cosd.c.i
@@ -564,7 +577,7 @@ stewart_V2_c/src/cosd.i: stewart_V2_c/src/cosd.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/cosd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/cosd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/cosd.c.i
 .PHONY : stewart_V2_c/src/cosd.c.i
 
 stewart_V2_c/src/cosd.s: stewart_V2_c/src/cosd.c.s
@@ -572,7 +585,7 @@ stewart_V2_c/src/cosd.s: stewart_V2_c/src/cosd.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/cosd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/cosd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/cosd.c.s
 .PHONY : stewart_V2_c/src/cosd.c.s
 
 stewart_V2_c/src/cumtrapz.o: stewart_V2_c/src/cumtrapz.c.o
@@ -580,7 +593,7 @@ stewart_V2_c/src/cumtrapz.o: stewart_V2_c/src/cumtrapz.c.o
 
 # target to build an object file
 stewart_V2_c/src/cumtrapz.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/cumtrapz.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/cumtrapz.c.o
 .PHONY : stewart_V2_c/src/cumtrapz.c.o
 
 stewart_V2_c/src/cumtrapz.i: stewart_V2_c/src/cumtrapz.c.i
@@ -588,7 +601,7 @@ stewart_V2_c/src/cumtrapz.i: stewart_V2_c/src/cumtrapz.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/cumtrapz.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/cumtrapz.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/cumtrapz.c.i
 .PHONY : stewart_V2_c/src/cumtrapz.c.i
 
 stewart_V2_c/src/cumtrapz.s: stewart_V2_c/src/cumtrapz.c.s
@@ -596,7 +609,7 @@ stewart_V2_c/src/cumtrapz.s: stewart_V2_c/src/cumtrapz.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/cumtrapz.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/cumtrapz.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/cumtrapz.c.s
 .PHONY : stewart_V2_c/src/cumtrapz.c.s
 
 stewart_V2_c/src/inv.o: stewart_V2_c/src/inv.c.o
@@ -604,7 +617,7 @@ stewart_V2_c/src/inv.o: stewart_V2_c/src/inv.c.o
 
 # target to build an object file
 stewart_V2_c/src/inv.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/inv.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/inv.c.o
 .PHONY : stewart_V2_c/src/inv.c.o
 
 stewart_V2_c/src/inv.i: stewart_V2_c/src/inv.c.i
@@ -612,7 +625,7 @@ stewart_V2_c/src/inv.i: stewart_V2_c/src/inv.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/inv.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/inv.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/inv.c.i
 .PHONY : stewart_V2_c/src/inv.c.i
 
 stewart_V2_c/src/inv.s: stewart_V2_c/src/inv.c.s
@@ -620,7 +633,7 @@ stewart_V2_c/src/inv.s: stewart_V2_c/src/inv.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/inv.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/inv.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/inv.c.s
 .PHONY : stewart_V2_c/src/inv.c.s
 
 stewart_V2_c/src/minOrMax.o: stewart_V2_c/src/minOrMax.c.o
@@ -628,7 +641,7 @@ stewart_V2_c/src/minOrMax.o: stewart_V2_c/src/minOrMax.c.o
 
 # target to build an object file
 stewart_V2_c/src/minOrMax.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/minOrMax.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/minOrMax.c.o
 .PHONY : stewart_V2_c/src/minOrMax.c.o
 
 stewart_V2_c/src/minOrMax.i: stewart_V2_c/src/minOrMax.c.i
@@ -636,7 +649,7 @@ stewart_V2_c/src/minOrMax.i: stewart_V2_c/src/minOrMax.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/minOrMax.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/minOrMax.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/minOrMax.c.i
 .PHONY : stewart_V2_c/src/minOrMax.c.i
 
 stewart_V2_c/src/minOrMax.s: stewart_V2_c/src/minOrMax.c.s
@@ -644,7 +657,7 @@ stewart_V2_c/src/minOrMax.s: stewart_V2_c/src/minOrMax.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/minOrMax.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/minOrMax.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/minOrMax.c.s
 .PHONY : stewart_V2_c/src/minOrMax.c.s
 
 stewart_V2_c/src/rtGetInf.o: stewart_V2_c/src/rtGetInf.c.o
@@ -652,7 +665,7 @@ stewart_V2_c/src/rtGetInf.o: stewart_V2_c/src/rtGetInf.c.o
 
 # target to build an object file
 stewart_V2_c/src/rtGetInf.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/rtGetInf.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/rtGetInf.c.o
 .PHONY : stewart_V2_c/src/rtGetInf.c.o
 
 stewart_V2_c/src/rtGetInf.i: stewart_V2_c/src/rtGetInf.c.i
@@ -660,7 +673,7 @@ stewart_V2_c/src/rtGetInf.i: stewart_V2_c/src/rtGetInf.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/rtGetInf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/rtGetInf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/rtGetInf.c.i
 .PHONY : stewart_V2_c/src/rtGetInf.c.i
 
 stewart_V2_c/src/rtGetInf.s: stewart_V2_c/src/rtGetInf.c.s
@@ -668,7 +681,7 @@ stewart_V2_c/src/rtGetInf.s: stewart_V2_c/src/rtGetInf.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/rtGetInf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/rtGetInf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/rtGetInf.c.s
 .PHONY : stewart_V2_c/src/rtGetInf.c.s
 
 stewart_V2_c/src/rtGetNaN.o: stewart_V2_c/src/rtGetNaN.c.o
@@ -676,7 +689,7 @@ stewart_V2_c/src/rtGetNaN.o: stewart_V2_c/src/rtGetNaN.c.o
 
 # target to build an object file
 stewart_V2_c/src/rtGetNaN.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/rtGetNaN.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/rtGetNaN.c.o
 .PHONY : stewart_V2_c/src/rtGetNaN.c.o
 
 stewart_V2_c/src/rtGetNaN.i: stewart_V2_c/src/rtGetNaN.c.i
@@ -684,7 +697,7 @@ stewart_V2_c/src/rtGetNaN.i: stewart_V2_c/src/rtGetNaN.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/rtGetNaN.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/rtGetNaN.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/rtGetNaN.c.i
 .PHONY : stewart_V2_c/src/rtGetNaN.c.i
 
 stewart_V2_c/src/rtGetNaN.s: stewart_V2_c/src/rtGetNaN.c.s
@@ -692,7 +705,7 @@ stewart_V2_c/src/rtGetNaN.s: stewart_V2_c/src/rtGetNaN.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/rtGetNaN.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/rtGetNaN.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/rtGetNaN.c.s
 .PHONY : stewart_V2_c/src/rtGetNaN.c.s
 
 stewart_V2_c/src/rt_nonfinite.o: stewart_V2_c/src/rt_nonfinite.c.o
@@ -700,7 +713,7 @@ stewart_V2_c/src/rt_nonfinite.o: stewart_V2_c/src/rt_nonfinite.c.o
 
 # target to build an object file
 stewart_V2_c/src/rt_nonfinite.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/rt_nonfinite.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/rt_nonfinite.c.o
 .PHONY : stewart_V2_c/src/rt_nonfinite.c.o
 
 stewart_V2_c/src/rt_nonfinite.i: stewart_V2_c/src/rt_nonfinite.c.i
@@ -708,7 +721,7 @@ stewart_V2_c/src/rt_nonfinite.i: stewart_V2_c/src/rt_nonfinite.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/rt_nonfinite.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/rt_nonfinite.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/rt_nonfinite.c.i
 .PHONY : stewart_V2_c/src/rt_nonfinite.c.i
 
 stewart_V2_c/src/rt_nonfinite.s: stewart_V2_c/src/rt_nonfinite.c.s
@@ -716,7 +729,7 @@ stewart_V2_c/src/rt_nonfinite.s: stewart_V2_c/src/rt_nonfinite.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/rt_nonfinite.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/rt_nonfinite.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/rt_nonfinite.c.s
 .PHONY : stewart_V2_c/src/rt_nonfinite.c.s
 
 stewart_V2_c/src/sind.o: stewart_V2_c/src/sind.c.o
@@ -724,7 +737,7 @@ stewart_V2_c/src/sind.o: stewart_V2_c/src/sind.c.o
 
 # target to build an object file
 stewart_V2_c/src/sind.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/sind.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/sind.c.o
 .PHONY : stewart_V2_c/src/sind.c.o
 
 stewart_V2_c/src/sind.i: stewart_V2_c/src/sind.c.i
@@ -732,7 +745,7 @@ stewart_V2_c/src/sind.i: stewart_V2_c/src/sind.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/sind.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/sind.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/sind.c.i
 .PHONY : stewart_V2_c/src/sind.c.i
 
 stewart_V2_c/src/sind.s: stewart_V2_c/src/sind.c.s
@@ -740,7 +753,7 @@ stewart_V2_c/src/sind.s: stewart_V2_c/src/sind.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/sind.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/sind.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/sind.c.s
 .PHONY : stewart_V2_c/src/sind.c.s
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1.o: stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.o
@@ -748,7 +761,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1.o: stewart_V2_c/src/ste
 
 # target to build an object file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.o
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.o
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1.i: stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.i
@@ -756,7 +769,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1.i: stewart_V2_c/src/ste
 
 # target to preprocess a source file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.i
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.i
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1.s: stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.s
@@ -764,7 +777,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1.s: stewart_V2_c/src/ste
 
 # target to generate assembly for a file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.s
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1.c.s
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.o: stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.o
@@ -772,7 +785,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.o: stewart_V2_c/sr
 
 # target to build an object file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.o
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.o
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.i: stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.i
@@ -780,7 +793,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.i: stewart_V2_c/sr
 
 # target to preprocess a source file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.i
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.i
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.s: stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.s
@@ -788,7 +801,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.s: stewart_V2_c/sr
 
 # target to generate assembly for a file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.s
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_data.c.s
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.o: stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.o
@@ -796,7 +809,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.o: stewart_V2_c
 
 # target to build an object file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.o
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.o
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.i: stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.i
@@ -804,7 +817,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.i: stewart_V2_c
 
 # target to preprocess a source file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.i
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.i
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.s: stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.s
@@ -812,7 +825,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.s: stewart_V2_c
 
 # target to generate assembly for a file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.s
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_emxutil.c.s
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.o: stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.o
@@ -820,7 +833,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.o: stewart_V
 
 # target to build an object file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.o
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.o
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.i: stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.i
@@ -828,7 +841,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.i: stewart_V
 
 # target to preprocess a source file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.i
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.i
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.s: stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.s
@@ -836,7 +849,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.s: stewart_V
 
 # target to generate assembly for a file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.s
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_initialize.c.s
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.o: stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.o
@@ -844,7 +857,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.o: stewart_V2_c
 
 # target to build an object file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.o
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.o
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.i: stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.i
@@ -852,7 +865,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.i: stewart_V2_c
 
 # target to preprocess a source file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.i
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.i
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.s: stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.s
@@ -860,7 +873,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.s: stewart_V2_c
 
 # target to generate assembly for a file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.s
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_rtwutil.c.s
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.o: stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.o
@@ -868,7 +881,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.o: stewart_V2
 
 # target to build an object file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.o
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.o
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.i: stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.i
@@ -876,7 +889,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.i: stewart_V2
 
 # target to preprocess a source file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.i
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.i
 
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.s: stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.s
@@ -884,7 +897,7 @@ stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.s: stewart_V2
 
 # target to generate assembly for a file
 stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.s
 .PHONY : stewart_V2_c/src/stewart_control_function_V4_part_test_1_terminate.c.s
 
 stewart_V2_c/src/svd.o: stewart_V2_c/src/svd.c.o
@@ -892,7 +905,7 @@ stewart_V2_c/src/svd.o: stewart_V2_c/src/svd.c.o
 
 # target to build an object file
 stewart_V2_c/src/svd.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/svd.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/svd.c.o
 .PHONY : stewart_V2_c/src/svd.c.o
 
 stewart_V2_c/src/svd.i: stewart_V2_c/src/svd.c.i
@@ -900,7 +913,7 @@ stewart_V2_c/src/svd.i: stewart_V2_c/src/svd.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/svd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/svd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/svd.c.i
 .PHONY : stewart_V2_c/src/svd.c.i
 
 stewart_V2_c/src/svd.s: stewart_V2_c/src/svd.c.s
@@ -908,7 +921,7 @@ stewart_V2_c/src/svd.s: stewart_V2_c/src/svd.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/svd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/svd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/svd.c.s
 .PHONY : stewart_V2_c/src/svd.c.s
 
 stewart_V2_c/src/xaxpy.o: stewart_V2_c/src/xaxpy.c.o
@@ -916,7 +929,7 @@ stewart_V2_c/src/xaxpy.o: stewart_V2_c/src/xaxpy.c.o
 
 # target to build an object file
 stewart_V2_c/src/xaxpy.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xaxpy.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xaxpy.c.o
 .PHONY : stewart_V2_c/src/xaxpy.c.o
 
 stewart_V2_c/src/xaxpy.i: stewart_V2_c/src/xaxpy.c.i
@@ -924,7 +937,7 @@ stewart_V2_c/src/xaxpy.i: stewart_V2_c/src/xaxpy.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/xaxpy.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xaxpy.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xaxpy.c.i
 .PHONY : stewart_V2_c/src/xaxpy.c.i
 
 stewart_V2_c/src/xaxpy.s: stewart_V2_c/src/xaxpy.c.s
@@ -932,7 +945,7 @@ stewart_V2_c/src/xaxpy.s: stewart_V2_c/src/xaxpy.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/xaxpy.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xaxpy.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xaxpy.c.s
 .PHONY : stewart_V2_c/src/xaxpy.c.s
 
 stewart_V2_c/src/xdotc.o: stewart_V2_c/src/xdotc.c.o
@@ -940,7 +953,7 @@ stewart_V2_c/src/xdotc.o: stewart_V2_c/src/xdotc.c.o
 
 # target to build an object file
 stewart_V2_c/src/xdotc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xdotc.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xdotc.c.o
 .PHONY : stewart_V2_c/src/xdotc.c.o
 
 stewart_V2_c/src/xdotc.i: stewart_V2_c/src/xdotc.c.i
@@ -948,7 +961,7 @@ stewart_V2_c/src/xdotc.i: stewart_V2_c/src/xdotc.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/xdotc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xdotc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xdotc.c.i
 .PHONY : stewart_V2_c/src/xdotc.c.i
 
 stewart_V2_c/src/xdotc.s: stewart_V2_c/src/xdotc.c.s
@@ -956,7 +969,7 @@ stewart_V2_c/src/xdotc.s: stewart_V2_c/src/xdotc.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/xdotc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xdotc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xdotc.c.s
 .PHONY : stewart_V2_c/src/xdotc.c.s
 
 stewart_V2_c/src/xnrm2.o: stewart_V2_c/src/xnrm2.c.o
@@ -964,7 +977,7 @@ stewart_V2_c/src/xnrm2.o: stewart_V2_c/src/xnrm2.c.o
 
 # target to build an object file
 stewart_V2_c/src/xnrm2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xnrm2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xnrm2.c.o
 .PHONY : stewart_V2_c/src/xnrm2.c.o
 
 stewart_V2_c/src/xnrm2.i: stewart_V2_c/src/xnrm2.c.i
@@ -972,7 +985,7 @@ stewart_V2_c/src/xnrm2.i: stewart_V2_c/src/xnrm2.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/xnrm2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xnrm2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xnrm2.c.i
 .PHONY : stewart_V2_c/src/xnrm2.c.i
 
 stewart_V2_c/src/xnrm2.s: stewart_V2_c/src/xnrm2.c.s
@@ -980,7 +993,7 @@ stewart_V2_c/src/xnrm2.s: stewart_V2_c/src/xnrm2.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/xnrm2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xnrm2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xnrm2.c.s
 .PHONY : stewart_V2_c/src/xnrm2.c.s
 
 stewart_V2_c/src/xrot.o: stewart_V2_c/src/xrot.c.o
@@ -988,7 +1001,7 @@ stewart_V2_c/src/xrot.o: stewart_V2_c/src/xrot.c.o
 
 # target to build an object file
 stewart_V2_c/src/xrot.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xrot.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xrot.c.o
 .PHONY : stewart_V2_c/src/xrot.c.o
 
 stewart_V2_c/src/xrot.i: stewart_V2_c/src/xrot.c.i
@@ -996,7 +1009,7 @@ stewart_V2_c/src/xrot.i: stewart_V2_c/src/xrot.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/xrot.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xrot.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xrot.c.i
 .PHONY : stewart_V2_c/src/xrot.c.i
 
 stewart_V2_c/src/xrot.s: stewart_V2_c/src/xrot.c.s
@@ -1004,7 +1017,7 @@ stewart_V2_c/src/xrot.s: stewart_V2_c/src/xrot.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/xrot.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xrot.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xrot.c.s
 .PHONY : stewart_V2_c/src/xrot.c.s
 
 stewart_V2_c/src/xrotg.o: stewart_V2_c/src/xrotg.c.o
@@ -1012,7 +1025,7 @@ stewart_V2_c/src/xrotg.o: stewart_V2_c/src/xrotg.c.o
 
 # target to build an object file
 stewart_V2_c/src/xrotg.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xrotg.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xrotg.c.o
 .PHONY : stewart_V2_c/src/xrotg.c.o
 
 stewart_V2_c/src/xrotg.i: stewart_V2_c/src/xrotg.c.i
@@ -1020,7 +1033,7 @@ stewart_V2_c/src/xrotg.i: stewart_V2_c/src/xrotg.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/xrotg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xrotg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xrotg.c.i
 .PHONY : stewart_V2_c/src/xrotg.c.i
 
 stewart_V2_c/src/xrotg.s: stewart_V2_c/src/xrotg.c.s
@@ -1028,7 +1041,7 @@ stewart_V2_c/src/xrotg.s: stewart_V2_c/src/xrotg.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/xrotg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xrotg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xrotg.c.s
 .PHONY : stewart_V2_c/src/xrotg.c.s
 
 stewart_V2_c/src/xswap.o: stewart_V2_c/src/xswap.c.o
@@ -1036,7 +1049,7 @@ stewart_V2_c/src/xswap.o: stewart_V2_c/src/xswap.c.o
 
 # target to build an object file
 stewart_V2_c/src/xswap.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xswap.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xswap.c.o
 .PHONY : stewart_V2_c/src/xswap.c.o
 
 stewart_V2_c/src/xswap.i: stewart_V2_c/src/xswap.c.i
@@ -1044,7 +1057,7 @@ stewart_V2_c/src/xswap.i: stewart_V2_c/src/xswap.c.i
 
 # target to preprocess a source file
 stewart_V2_c/src/xswap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xswap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xswap.c.i
 .PHONY : stewart_V2_c/src/xswap.c.i
 
 stewart_V2_c/src/xswap.s: stewart_V2_c/src/xswap.c.s
@@ -1052,7 +1065,7 @@ stewart_V2_c/src/xswap.s: stewart_V2_c/src/xswap.c.s
 
 # target to generate assembly for a file
 stewart_V2_c/src/xswap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlab_damo.dir/build.make CMakeFiles/matlab_damo.dir/stewart_V2_c/src/xswap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/libstewart_V2_c.dir/build.make CMakeFiles/libstewart_V2_c.dir/stewart_V2_c/src/xswap.c.s
 .PHONY : stewart_V2_c/src/xswap.c.s
 
 # Help Target
@@ -1092,6 +1105,7 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
+	@echo "... libstewart_V2_c"
 	@echo "... matlab_damo"
 	@echo "... src/main.o"
 	@echo "... src/main.i"

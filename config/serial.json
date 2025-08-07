@@ -1,5 +1,5 @@
 {
-    "port" : "/dev/ttyCH341USB0",
+    "port" : "/dev/ttyUSB0",
     "baud_rate" : 115200,
     "character_size": 8,
     "parity" : 0,

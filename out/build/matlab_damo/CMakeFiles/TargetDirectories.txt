@@ -1,3 +1,4 @@
+/home/tom/matlab_damo/out/build/matlab_damo/CMakeFiles/libstewart_V2_c.dir
 /home/tom/matlab_damo/out/build/matlab_damo/CMakeFiles/matlab_damo.dir
 /home/tom/matlab_damo/out/build/matlab_damo/CMakeFiles/Experimental.dir
 /home/tom/matlab_damo/out/build/matlab_damo/CMakeFiles/Nightly.dir
