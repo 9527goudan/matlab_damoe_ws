@@ -2,24 +2,39 @@
 #define _SERIAL_CLASS_
 
 #include <boost/asio.hpp>
+#include <boost/bind.hpp>
 #include <string>
 #include <iostream>
 #include <jsoncpp/json/json.h>
 #include <fstream>
 #include <termios.h>
-
+#include "stewart_control_function_V4_part_test_1.h"
 
 using namespace std;
 using namespace boost::asio;
+
+struct matlabV6Planning
+{
+    int dataLenger;
+    double *data;
+    int *dataSize;
+};
+
 
 class SERIAL
 {
 private:
     io_service io;
     serial_port serial;
-    bool is_open_serial;
-    string portName{};
+    bool is_open_serial, is_asyncRuning;
+    string portName{}, matlabV6Async{}, witeBuff{};
     int serial_fd;
+
+    bool is_updata;
+
+    int asyncBuffLenger{};
+    vector<char> readBuff;
+    matlabV6Planning planning_;
 
 public:
     /// @brief 构造函数，串口参数设置
@@ -52,6 +67,31 @@ public:
     /// @param witeBuff 写入的数据
     void witeSome(double *witeBuff);
 
+
+    /// @brief 监听io流
+    void asyncRun();
+
+    /// @brief 暂停监听io流
+    void asyncStop();
+
+    /// @brief 关闭串口
+    void Close();
+
+
+    void handleRead(const boost::system::error_code &error_, size_t byte_read);
+
+    void startAsyncRead();
+
+    void serialAsyncRunSerive();
+    void setAsyncBuffLenger(int lenger_);
+
+    void setPlanningStorage(double *planningData, int dataLenger, int *dataSize);
+
+    void handleWite(const boost::system::error_code &error_);
+
+    void AsyncWite(string witBuff);
+
+    void speedPlanning();
 };
 
 /// @brief 读取参数文件，加载串口配置
