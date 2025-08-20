@@ -158,6 +158,7 @@ void SERIAL::handleRead(const boost::system::error_code &error_, size_t byte_rea
 {
     if (is_asyncRuning && !error_)
     {
+        matlabV6Async.clear();
         for (size_t i = 0; i < byte_read; i++)
             matlabV6Async += readBuff[i];
 
@@ -166,16 +167,22 @@ void SERIAL::handleRead(const boost::system::error_code &error_, size_t byte_rea
         pos_end = matlabV6Async.find_first_of("m");
         if(pos_hander < pos_end && pos_end < asyncBuffLenger)
         {
-            cout << "witeBuff : [" << matlabV6Async << " ]" << endl;
+            cout << "matlabV6Async : [" << matlabV6Async << " ]" << endl;
             float Pf[6] = {0, 0 , 700};
             float sensor_lenger[6]{};
 
-            sscanf(witeBuff.c_str(), "x%fy%fz%fp1%fp2%fp3%fp4%fp5%fp6%fm", &Pf[3], &Pf[4], &Pf[5], 
-                    &sensor_lenger[0], &sensor_lenger[1], &sensor_lenger[2], &sensor_lenger[3], &sensor_lenger[4], &sensor_lenger[5]);
+            int res = sscanf(matlabV6Async.c_str(), "x%fy%fz%fp1%fp2%fp3%fp4%fp5%fp6%fm", &Pf[3], &Pf[4], &Pf[5], 
+            &sensor_lenger[0], &sensor_lenger[1], &sensor_lenger[2], &sensor_lenger[3], &sensor_lenger[4], &sensor_lenger[5]);
 
-            witeBuff.clear();
+            if (res < 9)
+            {
+                cout << "数据解析错误，检查数据格式。 res = " << res << endl;
+                matlabV6Async.clear();
+                startAsyncRead();
+                return;
+            }
             double sensor_lenger_[6]{}, Pf_[6]{};
-                    
+            
             for (size_t i = 0; i < 6; i++)
             {
                 sensor_lenger_[i] = sensor_lenger[i];
@@ -185,7 +192,6 @@ void SERIAL::handleRead(const boost::system::error_code &error_, size_t byte_rea
             double vec[6]{};
             stewart_control_function_V4_part_test_1(this->planning_.data, this->planning_.dataLenger, this->planning_.dataSize, sensor_lenger_, Pf_, vec);
             this->witeSome(vec);
-            matlabV6Async.clear();
         }
         if(asyncBuffLenger < matlabV6Async.length())
             matlabV6Async.clear();
@@ -207,8 +213,9 @@ void SERIAL::startAsyncRead()
 
 void SERIAL::serialAsyncRunSerive()
 {
-    this->startAsyncRead();
     this->asyncRun();
+    this->startAsyncRead();
+
 }
 
 
